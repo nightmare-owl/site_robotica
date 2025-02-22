@@ -25,21 +25,21 @@ nav {
 }
 
 /* Agrupamento da logo e nome */
-.logo-container {
+.logo {
     display: flex;
     align-items: center;
     gap: 10px; /* Espaço entre a imagem e o nome */
 }
 
 /* Estilização da imagem do logo */
-.logo-container img {
+.logo img {
     height: 50px; /* Ajuste conforme necessário */
 }
 
-.logo {
+.logo-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #173A6F; /* Cor azul da logo */
+    color: #01204f; /* Cor azul da logo */
 }
 
 /* Estilização da lista do menu */
@@ -59,7 +59,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #173A6F;
+    color: #01204f;
     font-size: 1.2em;
     font-weight: bold;
     transition: 0.3s;
@@ -69,3 +69,45 @@ nav ul li a {
 nav ul li a:hover {
     color: #FFD700; /* Amarelo-dourado ao passar o mouse */
 }
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    background: #01204f;
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #01204f;
+    background-color: #38c6a3; /* Cor do destaque */
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.hero-content img {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
