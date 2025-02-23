@@ -190,11 +190,11 @@ nav ul li a:hover {
     color: #00D1B2;
 }
 
-.imagem {
+.imagem-equipe {
     width: 45%;
 }
 
-.imagem img {
+.imagem-equipe img {
     width: 100%;
 }
 
@@ -232,6 +232,7 @@ nav ul li a:hover {
     height: 100%;
 }
 .projeto-branco {
+    color: #1A2C55;
     padding: 30px;
     display: flex;
     flex-direction: column;
