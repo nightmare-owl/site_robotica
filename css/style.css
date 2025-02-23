@@ -167,6 +167,7 @@ nav ul li a:hover {
     margin: auto;
 }
 .texto-sobre-nos{
+    text-align: justify;
     font-size: 1.35em;
     max-width: 500px;
     margin: auto;
@@ -203,6 +204,18 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.texto-robos{
+    font-size: 1.25em;
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+}
+
+.titulo-robo{
+    font-size: 1.45em;
+    max-width: 180px;
+}
+
 .projetos-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -230,7 +243,7 @@ nav ul li a:hover {
     width: 100%;
 }
 
-.projeto .titulo {
+.projeto .titulo-robo {
     color: #00D1B2;
 }
 
