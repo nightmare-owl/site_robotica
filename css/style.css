@@ -111,34 +111,60 @@ nav ul li a:hover {
     height: auto;
 }
 
-#eventos {
-    background-color: #f4f4f4; /* Fundo claro para destacar */
-    padding: 50px 20px;
+.eventos {
     text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
 }
 
-#eventos h2 {
-    font-size: 2em;
-    color: #0B2340; /* Azul escuro para destaque */
-    margin-bottom: 20px;
+.carousel-container {
+    position: relative;
+    max-width: 900px; /* Ajuste para exibir 3 imagens */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.galeria {
+.carousel {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre imagens */
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+    transition: transform 0.5s ease-in-out;
+    gap: 10px; /* Espaço entre as imagens */
 }
 
-.galeria img {
-    width: 300px; /* Tamanho padrão das imagens */
-    height: 200px; /* Mantém proporção */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.carousel img {
+    width: calc(100% / 3 - 10px); /* Divide a largura por 3 */
+    flex-shrink: 0;
+    max-width: 300px; /* Tamanho fixo */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.galeria img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+/* Botões de navegação */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
 }
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
