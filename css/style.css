@@ -111,3 +111,34 @@ nav ul li a:hover {
     height: auto;
 }
 
+#eventos {
+    background-color: #f4f4f4; /* Fundo claro para destacar */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#eventos h2 {
+    font-size: 2em;
+    color: #0B2340; /* Azul escuro para destaque */
+    margin-bottom: 20px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+}
+
+.galeria img {
+    width: 300px; /* Tamanho padrão das imagens */
+    height: 200px; /* Mantém proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
