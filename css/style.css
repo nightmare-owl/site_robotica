@@ -114,6 +114,10 @@ nav ul li a:hover {
 .eventos {
     text-align: center;
     padding: 20px;
+    color:#01204f;
+    color: #003366; /* Azul escuro */
+    font-size: 1.5rem; /* Aumenta o tamanho do título */
+
 }
 
 .carousel-container {
@@ -135,7 +139,10 @@ nav ul li a:hover {
     width: 30%;
     flex: 0 0 auto;
     transition: transform 0.5s ease, filter 0.5s ease;
-    border-radius: 10px;
+    width: 150;  
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px; 
 }
 
 /* Efeito de desfoque nas laterais */
