@@ -1,29 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
     const images = document.querySelectorAll(".carousel img");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-
-    let index = 0;
     const totalImages = images.length;
+    let index = 0;
 
     function updateCarousel() {
-        carousel.style.transform = `translateX(${-index * 100}%)`;
+        const offset = index * -35; // Move os slides para a esquerda
+        carousel.style.transform = `translateX(${offset}%)`;
+
+        // Aplica efeito de desfoque e tamanho nas imagens
+        images.forEach((img, i) => {
+            if (i === index + 1) {
+                img.style.filter = "none";
+                img.style.transform = "scale(1)";
+            } else {
+                img.style.filter = "blur(3px)";
+                img.style.transform = "scale(0.9)";
+            }
+        });
     }
 
-    nextBtn.addEventListener("click", function () {
-        index = (index + 1) % totalImages;
+    document.querySelector(".prev-btn").addEventListener("click", function () {
+        index = (index > 0) ? index - 1 : totalImages - 3;
         updateCarousel();
     });
 
-    prevBtn.addEventListener("click", function () {
-        index = (index - 1 + totalImages) % totalImages;
+    document.querySelector(".next-btn").addEventListener("click", function () {
+        index = (index < totalImages - 3) ? index + 1 : 0;
         updateCarousel();
     });
 
-    // Auto-slide a cada 3 segundos
-    setInterval(() => {
-        index = (index + 1) % totalImages;
-        updateCarousel();
-    }, 3000);
+    updateCarousel();
 });

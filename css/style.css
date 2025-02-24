@@ -113,31 +113,35 @@ nav ul li a:hover {
 
 .eventos {
     text-align: center;
-    padding: 50px;
-    background-color: #f4f4f4;
+    padding: 20px;
 }
 
 .carousel-container {
     position: relative;
-    max-width: 900px; /* Ajuste para exibir 3 imagens */
+    width: 80%;
+    max-width: 1000px;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .carousel {
     display: flex;
+    gap: 15px;
     transition: transform 0.5s ease-in-out;
-    gap: 10px; /* Espaço entre as imagens */
+    width: 100%;
 }
 
 .carousel img {
-    width: calc(100% / 3 - 10px); /* Divide a largura por 3 */
-    flex-shrink: 0;
-    max-width: 300px; /* Tamanho fixo */
-    height: 200px;
-    object-fit: cover;
+    width: 30%;
+    flex: 0 0 auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
     border-radius: 10px;
+}
+
+/* Efeito de desfoque nas laterais */
+.carousel img:not(:nth-child(2)) {
+    filter: blur(3px);
+    transform: scale(0.9);
 }
 
 /* Botões de navegação */
@@ -151,25 +155,12 @@ nav ul li a:hover {
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
-    border-radius: 50%;
 }
 
-<<<<<<< HEAD
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
 
-
-=======
 /* Seção Sobre Nós */
 .sobre-nos {
     background-color: #1A2C55;
@@ -327,4 +318,4 @@ button {
 .next {
     right: 10px;
 }
->>>>>>> origin/main
+
