@@ -8,6 +8,7 @@
 body, html {
     width: 100%;
     overflow-x: hidden; /* Evita rolagem lateral */
+
 }
 
 /* Estilização da barra de navegação */
@@ -326,3 +327,69 @@ button {
     right: 10px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #fff;
+    padding: 20px;
+}
+.contact-box {
+    display: flex;
+    width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black
+}
+.contact-info {
+    width: 40%;
+    padding: 20px;
+}
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+}
+.contact-info p i {
+    margin-right: 10px;
+}
+.contact-form {
+    width: 60%;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+.contact-form h2 {
+    text-align: center;
+}
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+.form-group input {
+    flex: 1;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #1e3a5f;
+    color: #00D1B2
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contact-form button:hover {
+    background: #16304a;
+}
