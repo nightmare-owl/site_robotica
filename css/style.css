@@ -394,29 +394,41 @@ button {
     margin: 5px 0;
     border: 1px solid #cccccc;
 }
-.contact-form button {
-    background: #2b67b5;
-    color: white;
+input[type="submit"] {
+    background-color: #003366; /* Azul escuro */
+    color: #7FFFD4; /* Verde água */
     border: none;
+    padding: 5px 10px; 
+    font-size: 16px; /* Texto maior */
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* muda a cor e aumenta ligeiramente o tamanho ao passar o mouse*/
+    display: block;
+    margin: 5px auto; /* Centraliza o botão */
+    width: 205px;
+    height: 50px;
 }
-.contact-form button:hover {
-    background: #16304a;
+
+input[type="submit"]:hover {
+    background-color: #002244; /* Tom mais escuro ao passar o mouse */
+    transform: scale(1.05);
 }
+
 .social-icons {
-    margin-top: 15px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 10px; /* Reduz o espaço entre ícones */
+    margin-top: 30px; /* Ajusta a posição abaixo do botão */
+    margin-right: 400px;
 }
 
-.social-icons a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 24px;
+.social-icons img {
+    width: 50px; /* Reduz o tamanho dos ícones */
+    height: 50px;
+    transition: transform 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #0056b3;
+.social-icons img:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
