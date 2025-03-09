@@ -133,38 +133,47 @@
                 </div>
             </div>
         </div>
-    </section>
-    
-
-
+      </section>
     </header>
-   
-  <div class="container">
-        <div class="title">Contato</div>
-        <form>
-            <div class="form-group">
-                <label>Nome</label>
-                <input type="text" placeholder="Digite seu nome">
+    
+      <div class="container">
+        <div class="contact-box">
+            <div class="contact-info">
+                <h5>Endereço</h5>
+                <p>Fazenda Varginha</p>
+                <p>Km 02 - Rod. Salinas/Taboeiras</p>
+                <p>Salinas - Minas Gerais</p>
+                <p>CEP: 39560-000</p>
+                <br>
+                <h6>Telefone de contato</h6>
+                <p>+55 (38) 3841-7000</p>
+                <br>
+                <h7>E-mail de contato</h7> 
+                <p>wallbotz573@gmail.com</p>
             </div>
-            <div class="form-group">
-                <label>E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail">
+            <div class="contact-form">
+                <h2>Contato</h2>
+                <form id="formContato">
+                    <div class="form-group">
+                        <input type="text" id="nome" placeholder="Nome" autocomplete="off" required>
+                        <input type="email" id="email" placeholder="E-mail" autocapitalize="off" required>
+                    </div>
+                    <input type="text" id="assunto" placeholder="Assunto" autocomplete="off" required>
+                    <textarea id="mensagem" rows="4" placeholder="Mensagem" autocomplete="off" required></textarea>
+                    
+                    <input type="submit" value="Enviar sua mensagem">
+                
+                    <!-- Ícones das Redes Sociais -->
+                    <div class="social-icons">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </form>
             </div>
-            <div class="form-group">
-                <label>Assunto</label>
-                <input type="text" placeholder="Digite o assunto">
-            </div>
-            <div class="form-group">
-                <label>Mensagem</label>
-                <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
-        <div class="info">
-            <p><strong>Endereço:</strong> Fazenda Varginha, Km 02, Rod. Salinas/Taiobeiras, Salinas - MG, CEP: 39560-000, Brasil</p>
-            <p><strong>Telefone:</strong> +55 (38) 3841-7000</p>
-            <p><strong>E-mail:</strong> wallbotz973@gmail.com</p>
         </div>
     </div>
+
   </body>
 </html>
