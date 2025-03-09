@@ -341,14 +341,16 @@ button {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    color: black
+    color: black;
 }
 .contact-info {
     width: 40%;
     padding: 20px;
 }
-.contact-info h2 {
+.contact-info h5, h6, h7 {
     margin-bottom: 10px;
+    color: #38d100;
+    font-size: 1.2rem;
 }
 .contact-info p {
     display: flex;
@@ -363,9 +365,21 @@ button {
     background: white;
     color: black;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .contact-form h2 {
     text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+.contact-form h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #1e3a5f;
+    margin: 5px auto 0;
 }
 .form-group {
     display: flex;
@@ -374,22 +388,35 @@ button {
 .form-group input {
     flex: 1;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input, .contact-form textarea{
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #cccccc;
 }
 .contact-form button {
-    width: 100%;
-    padding: 10px;
-    background: #1e3a5f;
-    color: #00D1B2
+    background: #2b67b5;
+    color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 .contact-form button:hover {
     background: #16304a;
+}
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
 }
