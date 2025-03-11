@@ -33,3 +33,49 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
     
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formContato");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Captura os valores dos campos
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const assunto = document.getElementById("assunto").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // Validação dos campos
+        if (!validarFormulario(nome, email, assunto, mensagem)) {
+            return;
+        }
+
+        // Simula o envio do formulário (Aqui você pode integrar com um backend)
+        alert("Mensagem enviada com sucesso!");
+
+        // Reset do formulário após o envio
+        form.reset();
+    });
+
+    // Função para validar o formulário
+    function validarFormulario(nome, email, assunto, mensagem) {
+        if (nome === "" || email === "" || assunto === "" || mensagem === "") {
+            alert("Por favor, preencha todos os campos!");
+            return false;
+        }
+
+        if (!validarEmail(email)) {
+            alert("Por favor, insira um e-mail válido!");
+            return false;
+        }
+
+        return true;
+    }
+
+    // Função para validar o e-mail com regex
+    function validarEmail(email) {
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regexEmail.test(email);
+    }
+});
