@@ -347,10 +347,17 @@ button {
     width: 40%;
     padding: 20px;
 }
+.contact-info img {
+    width: 20px; /* Ajuste o tamanho dos ícones */
+    height: 20px;
+}
 .contact-info h5, h6, h7 {
     margin-bottom: 10px;
     color: #38d100;
     font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 .contact-info p {
     display: flex;
@@ -427,6 +434,8 @@ input[type="submit"]:hover {
     width: 50px; /* Reduz o tamanho dos ícones */
     height: 50px;
     transition: transform 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .social-icons img:hover {
