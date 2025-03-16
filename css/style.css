@@ -353,7 +353,7 @@ button {
     width: 20px; /* Ajuste o tamanho dos ícones */
     height: 20px;
 }
-.contact-info h2, h3, h4 {
+.contact-info h4, h5, h6 {
     margin-bottom: 10px;
     color: #5DD4B2;
     font-size: 1.2rem;
