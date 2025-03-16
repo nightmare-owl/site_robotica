@@ -78,4 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regexEmail.test(email);
     }
+    // Função para tornar o e-mail clicável
+    const emailLink = document.querySelector("#emailContato");
+    if (emailLink) {
+        emailLink.addEventListener("click", function () {
+            window.location.href = "mailto:wallbotz573@gmail.com";
+        });
+    }
+
+    // Função para tornar o ícone do Instagram clicável
+    const instagramLink = document.querySelector("#instagramIcon");
+    if (instagramLink) {
+        instagramLink.addEventListener("click", function () {
+            window.open("https://www.instagram.com/roboticaif/", "_blank");
+        });
+    }
 });
