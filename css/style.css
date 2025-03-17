@@ -327,119 +327,153 @@ button {
     right: 10px;
 }
 
+/* Estilos gerais para a seção de contato */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
-    background-color: #fff;
-    padding: 20px;
-    width: 100%;
-}
-.contact-box {
-    display: flex;
-    width: 800px;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    color: black;
-}
-.contact-info {
-    width: 40%;
-    padding: 20px;
-    
-}
-.contact-info img {
-    width: 20px; /* Ajuste o tamanho dos ícones */
-    height: 20px;
-}
-.contact-info h4, h5, h6 {
-    margin-bottom: 10px;
-    color: #5DD4B2;
-    font-size: 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-.contact-info p {
-    display: flex;
-    align-items: center;
-}
-.contact-info p i {
-    margin-right: 10px;
-}
-.contact-form {
-    width: 60%;
-    padding: 20px;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-.contact-form h2 {
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px;
-}
-.contact-form h2::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #1e3a5f;
-    margin: 5px auto 0;
-}
-.form-group {
-    display: flex;
-    gap: 10px;
-}
-.form-group input {
-    flex: 1;
-}
-.contact-form input, .contact-form textarea{
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #cccccc;
-}
-input[type="submit"] {
-    background-color: #273260;
-    color: #5DD4B2;
-    border: none;
-    padding: 5px 10px; 
-    font-size: 16px; /* Texto maior */
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* muda a cor e aumenta ligeiramente o tamanho ao passar o mouse*/
-    display: block;
-    margin: 5px auto; /* Centraliza o botão */
-    width: 205px;
-    height: 50px;
+    padding: 40px 20px;
 }
 
-input[type="submit"]:hover {
-    background-color: #002244; /* Tom mais escuro ao passar o mouse */
-    transform: scale(1.05);
+.contact-box {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 30px;
+}
+
+.contact-info {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info div {
+    position: relative; /* Permite posicionar os ícones de forma absoluta dentro da div */
+    padding-left: 40px; /* Espaço para o ícone à esquerda */
+
+}
+
+.contact-info .contact-icon {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px; /* Tamanho do ícone */
+    position: absolute; /* Posiciona o ícone de forma absoluta */
+    left: 0; /* Alinha o ícone à esquerda */
+    top: 0; /* Alinha o ícone ao topo do contêiner */
+    z-index: 0; /* Coloca o ícone atrás do texto */
+    margin-left: 15px;
+}
+.contact-info h4, h5, h6 {
+    font-size: 18px;
+    color: #5DD4B2; /* Cor destacada para os títulos */
+    margin: 0; /* Remove margens padrão */
+    position: relative; /* Garante que o texto fique na frente do ícone */
+    z-index: 1; /* Coloca o texto na frente do ícone */
+}
+
+.contact-info p {
+    font-size: 14px;
+    color:black;
+    margin: 5px 0 0; /* Ajuste de margem */
+}
+
+.contact-info a {
+    color: black; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.contact-form {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo para o título do formulário de contato */
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #273260; /* Cor do título */
+    text-align: center; /* Centraliza o texto */
+    display: inline-block; /* Faz com que a linha tenha o mesmo comprimento que o texto */
+}
+
+.contact-form h2::after {
+    content: '';
+    display: block;
+    width: 100%; /* Linha com o mesmo comprimento que o texto */
+    height: 2px; /* Espessura da linha */
+    background-color: #273260; /* Cor da linha */
+    position: relative; /* Para adicionar a linha de sublinhado */
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    flex: 1;
+    width: 100%;
+    padding: px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #273260; /* Cor de fundo do botão */
+    color: #5DD4B2; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Transforma o botão em um bloco */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    width: 50%; /* Define uma largura para o botão */
+    max-width: 200px; /* Limita a largura máxima */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #34495e; /* Cor de fundo ao passar o mouse */
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    gap: 10px; /* Reduz o espaço entre ícones */
-    margin-top: 30px; /* Ajusta a posição abaixo do botão */
-    margin-right: 400px;
+    margin-top: 20px;
 }
 
 .social-icons img {
-    width: 50px; /* Reduz o tamanho dos ícones */
-    height: 50px;
-    transition: transform 0.3s ease;
-    padding: 10px;
-    border-radius: 8px;
+    width: 30px;
+    margin-right: 250px;
+    transition: transform 0.3s ease; /* Efeito de transição suave */
 }
 
 .social-icons img:hover {
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
