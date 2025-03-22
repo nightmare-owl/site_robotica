@@ -1,94 +1,85 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const images = document.querySelectorAll(".carousel img");
-    const totalImages = images.length;
-    let index = 0;
-
+    // =======================
+    // Carrossel de Eventos
+    // =======================
+    const carousel = document.querySelector('.carousel-eventos');
+    const prevBtn = document.querySelector('.event-prev');
+    const nextBtn = document.querySelector('.event-next');
+    const totalItems = document.querySelectorAll('.carousel-eventos img').length;
+    const itemsPerView = 3;
+    let currentIndex = 0;
+  
     function updateCarousel() {
-        const offset = index * -35; // Move os slides para a esquerda
-        carousel.style.transform = `translateX(${offset}%)`;
-
-        // Aplica efeito de desfoque e tamanho nas imagens
-        images.forEach((img, i) => {
-            if (i === index + 1) {
-                img.style.filter = "none";
-                img.style.transform = "scale(1)";
-            } else {
-                img.style.filter = "blur(3px)";
-                img.style.transform = "scale(0.9)";
-            }
-        });
+      const shift = currentIndex * (100 / itemsPerView);
+      carousel.style.transform = `translateX(-${shift}%)`;
     }
-
-    document.querySelector(".prev-btn").addEventListener("click", function () {
-        index = (index > 0) ? index - 1 : totalImages - 3;
+  
+    nextBtn.addEventListener('click', () => {
+      const maxIndex = Math.ceil(totalItems / itemsPerView) - 1;
+      if (currentIndex < maxIndex) {
+        currentIndex++;
         updateCarousel();
-    });
-
-    document.querySelector(".next-btn").addEventListener("click", function () {
-        index = (index < totalImages - 3) ? index + 1 : 0;
+      }
+    }); // <- Corrigido aqui!
+  
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
         updateCarousel();
+      }
     });
-
-    updateCarousel();
-    
-})
-
-document.addEventListener("DOMContentLoaded", function () {
+  
+    // =======================
+    // Validação do Formulário
+    // =======================
     const form = document.getElementById("formContato");
-
+  
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita o envio padrão do formulário
-
-        // Captura os valores dos campos
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const assunto = document.getElementById("assunto").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
-
-        // Validação dos campos
-        if (!validarFormulario(nome, email, assunto, mensagem)) {
-            return;
-        }
-
-        // Simula o envio do formulário (Aqui você pode integrar com um backend)
-        alert("Mensagem enviada com sucesso!");
-
-        // Reset do formulário após o envio
-        form.reset();
+      event.preventDefault();
+  
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const assunto = document.getElementById("assunto").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+  
+      if (!validarFormulario(nome, email, assunto, mensagem)) {
+        return;
+      }
+  
+      alert("Mensagem enviada com sucesso!");
+      form.reset();
     });
-
-    // Função para validar o formulário
+  
     function validarFormulario(nome, email, assunto, mensagem) {
-        if (nome === "" || email === "" || assunto === "" || mensagem === "") {
-            alert("Por favor, preencha todos os campos!");
-            return false;
-        }
-
-        if (!validarEmail(email)) {
-            alert("Por favor, insira um e-mail válido!");
-            return false;
-        }
-
-        return true;
+      if (nome === "" || email === "" || assunto === "" || mensagem === "") {
+        alert("Por favor, preencha todos os campos!");
+        return false;
+      }
+  
+      if (!validarEmail(email)) {
+        alert("Por favor, insira um e-mail válido!");
+        return false;
+      }
+  
+      return true;
     }
-
-    // Função para validar o e-mail com regex
+  
     function validarEmail(email) {
-        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regexEmail.test(email);
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regexEmail.test(email);
     }
-
+  
+    // =======================
+    // Botão Ver Mais / Ver Menos
+    // =======================
     const verMaisBtn = document.getElementById('verMaisBtn');
-  const materiaisExtras = document.getElementById('materiaisExtras');
-
-  verMaisBtn.addEventListener('click', () => {
-    const estaVisivel = materiaisExtras.style.display === 'flex' || materiaisExtras.style.display === 'block';
-
-    materiaisExtras.style.display = estaVisivel ? 'none' : 'flex';
-    verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
+    const materiaisExtras = document.getElementById('materiaisExtras');
+  
+    verMaisBtn.addEventListener('click', () => {
+      const estaVisivel = materiaisExtras.style.display === 'flex' || materiaisExtras.style.display === 'block';
+  
+      materiaisExtras.style.display = estaVisivel ? 'none' : 'flex';
+      verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
+    });
   });
-
-});
-
   

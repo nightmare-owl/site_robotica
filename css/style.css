@@ -154,7 +154,62 @@ nav ul li a:hover {
 
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
-
+.carousel-eventos-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+  }
+  
+  .carousel-eventos-wrapper {
+    overflow: hidden;
+  }
+  
+  .carousel-eventos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * (5 / 3)); /* 5 imagens / 3 visíveis = largura total proporcional */
+  }
+  
+  .carousel-eventos img {
+    flex: 0 0 calc(100% / 3); /* 3 imagens visíveis */
+    object-fit: cover;
+    height: 300px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .event-prev,
+  .event-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  
+  .event-prev:hover,
+  .event-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .event-prev {
+    left: 10px;
+  }
+  
+  .event-next {
+    right: 10px;
+  }
+  
 /* SOBRE NÓS */
 .sobre-nos {
     background-color: #1A2C55;
