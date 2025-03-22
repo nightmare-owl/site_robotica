@@ -122,17 +122,17 @@ nav ul li a:hover {
 
 .carousel {
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espaço entre as imagens */
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
-    width: 150px;
-    height: 300px;
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.5s ease, filter 0.5s ease;
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* Evita que as imagens se estiquem ou encolham */
 }
 
 .carousel img:not(:nth-child(2)) {
@@ -154,35 +154,40 @@ nav ul li a:hover {
 
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
+
+/* Contêiner para o carrossel */
 .carousel-eventos-container {
     position: relative;
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
     overflow: hidden;
-  }
-  
-  .carousel-eventos-wrapper {
+}
+
+.carousel-eventos-wrapper {
     overflow: hidden;
-  }
-  
-  .carousel-eventos {
+}
+
+/* A largura total do carrossel será proporcional ao número de imagens */
+.carousel-eventos {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(100% * (5 / 3)); /* 5 imagens / 3 visíveis = largura total proporcional */
-  }
-  
-  .carousel-eventos img {
-    flex: 0 0 calc(100% / 3); /* 3 imagens visíveis */
-    object-fit: cover;
-    height: 300px;
-    padding: 0 5px;
-    box-sizing: border-box;
+    width: calc(100% * 5 / 3); /* 5 imagens no total / 3 visíveis = proporção da largura */
+}
+
+.carousel-eventos img {
+    flex: 0 0 calc(100% / 5); /* Cada imagem ocupará 1/3 da largura do carrossel */
+    object-fit: cover; /* Manter a proporção da imagem sem distorcer */
+    height: 150px; /* Ajuste a altura conforme necessário */
+    width:auto;
+    padding: 0 5px; /* Pequeno espaçamento entre as imagens */
+    box-sizing: border-box; /* Certifique-se de que o padding não afete o tamanho */
     border-radius: 10px;
-  }
-  
-  .event-prev,
-  .event-next {
+}
+
+/* Botões de navegação */
+.event-prev,
+.event-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -195,21 +200,21 @@ nav ul li a:hover {
     border-radius: 50%;
     z-index: 1;
     transition: background-color 0.3s;
-  }
-  
-  .event-prev:hover,
-  .event-next:hover {
+}
+
+.event-prev:hover,
+.event-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .event-prev {
+}
+
+.event-prev {
     left: 10px;
-  }
-  
-  .event-next {
+}
+
+.event-next {
     right: 10px;
-  }
-  
+}
+
 /* SOBRE NÓS */
 .sobre-nos {
     background-color: #1A2C55;
