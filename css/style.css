@@ -1,4 +1,4 @@
-/* Resetando margens e preenchendo toda a largura */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,53 +7,46 @@
 
 body, html {
     width: 100%;
-    overflow-x: hidden; /* Evita rolagem lateral */
-
+    overflow-x: hidden;
 }
 
-/* Estilização da barra de navegação */
+/* NAVBAR */
 nav {
-    display: flex; /* Elementos lado a lado */
-    align-items: center; /* Alinha verticalmente */
-    justify-content: space-between; /* Mantém espaço entre logo e menu */
-    padding: 15px 5%; /* Espaçamento interno */
-    background-color: #5EC5A1; /* Cor de fundo */
-    width: 100vw; /* Ocupa toda a largura da tela */
-    position: fixed; /* Fixa no topo */
-    top: 0; /* Alinha no topo */
-    left: 0; /* Alinha à esquerda */
-    z-index: 1000; /* Mantém sobre os outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: #5EC5A1;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-/* Agrupamento da logo e nome */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre a imagem e o nome */
+    gap: 10px;
 }
 
-/* Estilização da imagem do logo */
 .logo img {
-    height: 50px; /* Ajuste conforme necessário */
+    height: 50px;
 }
 
 .logo-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #01204f; /* Cor azul da logo */
+    color: #01204f;
 }
 
-/* Estilização da lista do menu */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Impede que os itens fiquem fora da tela */
+    flex-wrap: wrap;
 }
 
-/* Itens do menu */
 nav ul li {
     display: inline;
 }
@@ -66,12 +59,11 @@ nav ul li a {
     transition: 0.3s;
 }
 
-/* Efeito hover */
 nav ul li a:hover {
-    color: #FFD700; /* Amarelo-dourado ao passar o mouse */
+    color: #FFD700;
 }
 
-
+/* HERO SECTION */
 .hero {
     display: flex;
     align-items: center;
@@ -97,7 +89,7 @@ nav ul li a:hover {
 
 .highlight {
     color: #01204f;
-    background-color: #38c6a3; /* Cor do destaque */
+    background-color: #38c6a3;
     padding: 5px 8px;
     border-radius: 5px;
 }
@@ -112,13 +104,12 @@ nav ul li a:hover {
     height: auto;
 }
 
+/* EVENTOS */
 .eventos {
     text-align: center;
     padding: 20px;
-    color:#01204f;
-    color: #003366; /* Azul escuro */
-    font-size: 1.5rem; /* Aumenta o tamanho do título */
-
+    color: #003366;
+    font-size: 1.5rem;
 }
 
 .carousel-container {
@@ -133,26 +124,22 @@ nav ul li a:hover {
     display: flex;
     gap: 30px;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
 }
 
 .carousel img {
-    width: 30%;
-    flex: 0 0 auto;
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.5s ease, filter 0.5s ease;
-    width: 150;  
-    height: 300px; 
-    object-fit: cover; 
-    border-radius: 10px; 
+    flex: 0 0 auto;
 }
 
-/* Efeito de desfoque nas laterais */
 .carousel img:not(:nth-child(2)) {
     filter: blur(3px);
     transform: scale(0.9);
 }
 
-/* Botões de navegação */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -161,15 +148,14 @@ nav ul li a:hover {
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
 
-
-/* Seção Sobre Nós */
+/* SOBRE NÓS */
 .sobre-nos {
     background-color: #1A2C55;
     color: white;
@@ -181,22 +167,16 @@ nav ul li a:hover {
     font-size: 2em;
 }
 
-.texto-pos-titulo{
+.pre-titulo,
+.texto-pos-titulo,
+.texto-sobre-nos {
+    margin: auto;
     font-size: 1.35em;
     max-width: 900px;
-    margin: auto;
 }
 
-.pre-titulo{
-    font-size: 1.5em;
-    max-width: 500px;
-    margin: auto;
-}
-.texto-sobre-nos{
+.texto-sobre-nos {
     text-align: justify;
-    font-size: 1.35em;
-    max-width: 500px;
-    margin: auto;
 }
 
 .sobre-conteudo {
@@ -224,20 +204,20 @@ nav ul li a:hover {
     width: 100%;
 }
 
-/* Seção Projetos */
+/* PROJETOS */
 .projetos {
     background-color: white;
     text-align: center;
 }
 
-.texto-robos{
+.texto-robos {
     font-size: 1.25em;
     max-width: 600px;
     margin: auto;
     text-align: justify;
 }
 
-.titulo-robo{
+.titulo-robo {
     font-size: 1.45em;
     max-width: 180px;
 }
@@ -245,28 +225,28 @@ nav ul li a:hover {
 .projetos-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: stretch; /* Faz com que todas as divs tenham a mesma altura */
+    align-items: stretch;
+}
+
+.projeto,
+.projeto-branco {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .projeto {
     background-color: #1A2C55;
     color: white;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.projeto-branco {
-    color: #1A2C55;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
 }
 
-.imagem-futurista img{
+.projeto-branco {
+    color: #1A2C55;
+}
+
+.imagem-futurista img {
     width: 100%;
 }
 
@@ -274,11 +254,7 @@ nav ul li a:hover {
     color: #00D1B2;
 }
 
-.projeto .carrossel img {
-    width: 100%;
-}
-
-
+/* CARROSSEL DENTRO DE PROJETOS */
 .carrossel {
     display: flex;
     align-items: center;
@@ -291,14 +267,13 @@ nav ul li a:hover {
 .slides {
     display: flex;
     overflow: hidden;
-    width: 400px; /* Ajuste conforme necessário */
+    width: 400px;
     height: 300px;
 }
 
 .slide {
     display: none;
     width: 100%;
-    height: auto;
     object-fit: cover;
     transition: opacity 0.5s ease-in-out;
 }
@@ -307,7 +282,8 @@ nav ul li a:hover {
     display: block;
 }
 
-button {
+button.prev,
+button.next {
     background: none;
     border: none;
     font-size: 24px;
@@ -319,17 +295,14 @@ button {
     color: #333;
 }
 
-.prev {
-    left: 10px;
-}
+button.prev { left: 10px; }
+button.next { right: 10px; }
 
-.next {
-    right: 10px;
-}
+/* MATERIAIS */
 .materiais {
     text-align: center;
     padding: 60px 5%;
-    background-color: #1A2C55; /* Azul conforme o mockup */
+    background-color: #1A2C55;
     color: white;
 }
 
@@ -338,25 +311,29 @@ button {
     margin-bottom: 10px;
     font-weight: bold;
 }
-.materiais p{
+
+.materiais p {
     margin-bottom: 20px;
 }
-.materiais-container {
+
+.materiais-container,
+.materiais-extra {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .material {
     background: white;
+    color: #003366;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     width: 250px;
     text-align: center;
     transition: transform 0.3s ease;
-    color:#003366
 }
 
 .material:hover {
@@ -375,22 +352,37 @@ button {
 }
 
 .download-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 18px;
-    background-color: #003d80;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .download-btn:hover {
     background-color: #002a5c;
 }
 
+#verMaisBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#verMaisBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* CONTATO */
 .container {
     display: flex;
     justify-content: center;
@@ -399,6 +391,7 @@ button {
     background-color: #fff;
     padding: 20px;
 }
+
 .contact-box {
     display: flex;
     width: 800px;
@@ -407,14 +400,17 @@ button {
     border-radius: 10px;
     color: black;
 }
+
 .contact-info {
     width: 40%;
     padding: 20px;
 }
+
 .contact-info img {
-    width: 20px; /* Ajuste o tamanho dos ícones */
+    width: 20px;
     height: 20px;
 }
+
 .contact-info h5, h6, h7 {
     margin-bottom: 10px;
     color: #38d100;
@@ -423,13 +419,16 @@ button {
     align-items: center;
     gap: 10px;
 }
+
 .contact-info p {
     display: flex;
     align-items: center;
 }
+
 .contact-info p i {
     margin-right: 10px;
 }
+
 .contact-form {
     width: 60%;
     padding: 20px;
@@ -439,11 +438,13 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 .contact-form h2 {
     text-align: center;
-    position: relative;
     padding-bottom: 10px;
+    position: relative;
 }
+
 .contact-form h2::after {
     content: "";
     display: block;
@@ -452,56 +453,61 @@ button {
     background-color: #1e3a5f;
     margin: 5px auto 0;
 }
+
 .form-group {
     display: flex;
     gap: 10px;
 }
+
 .form-group input {
     flex: 1;
 }
-.contact-form input, .contact-form textarea{
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
 }
+
 input[type="submit"] {
-    background-color: #003366; /* Azul escuro */
-    color: #7FFFD4; /* Verde água */
+    background-color: #003366;
+    color: #7FFFD4;
     border: none;
-    padding: 5px 10px; 
-    font-size: 16px; /* Texto maior */
+    padding: 5px 10px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* muda a cor e aumenta ligeiramente o tamanho ao passar o mouse*/
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     display: block;
-    margin: 5px auto; /* Centraliza o botão */
+    margin: 5px auto;
     width: 205px;
     height: 50px;
 }
 
 input[type="submit"]:hover {
-    background-color: #002244; /* Tom mais escuro ao passar o mouse */
+    background-color: #002244;
     transform: scale(1.05);
 }
 
 .social-icons {
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    gap: 10px; /* Reduz o espaço entre ícones */
-    margin-top: 30px; /* Ajusta a posição abaixo do botão */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
     margin-right: 400px;
 }
 
 .social-icons img {
-    width: 50px; /* Reduz o tamanho dos ícones */
+    width: 50px;
     height: 50px;
-    transition: transform 0.3s ease;
     padding: 10px;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    transform: scale(1.1);
 }

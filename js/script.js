@@ -78,4 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regexEmail.test(email);
     }
+
+    const verMaisBtn = document.getElementById('verMaisBtn');
+  const materiaisExtras = document.getElementById('materiaisExtras');
+
+  verMaisBtn.addEventListener('click', () => {
+    const estaVisivel = materiaisExtras.style.display === 'flex' || materiaisExtras.style.display === 'block';
+
+    materiaisExtras.style.display = estaVisivel ? 'none' : 'flex';
+    verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
+  });
+
 });
+
+  
