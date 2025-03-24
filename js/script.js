@@ -1,33 +1,82 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // =======================
-    // Carrossel de Eventos
-    // =======================
-    const carousel = document.querySelector('.carousel-eventos');
-    const prevBtn = document.querySelector('.event-prev');
-    const nextBtn = document.querySelector('.event-next');
-    const totalItems = document.querySelectorAll('.carousel-eventos img').length;
-    const itemsPerView = 3;
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+  // =======================
+  // Menu Mobile
+  // =======================
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
   
-    function updateCarousel() {
-      const shift = currentIndex * (100 / itemsPerView);
-      carousel.style.transform = `translateX(-${shift}%)`;
-    }
+  if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+      });
+  }
+
+  // Fechar menu ao clicar em um link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+          if (navLinks.classList.contains('active')) {
+              navLinks.classList.remove('active');
+              menuToggle.textContent = '☰';
+          }
+      });
+  });
+
+  // =======================
+  // Carrossel de Eventos (Responsivo)
+  // =======================
+  const carouselEventos = document.querySelector('.carousel-eventos');
+  const prevBtnEventos = document.querySelector('.event-prev');
+  const nextBtnEventos = document.querySelector('.event-next');
+  const eventosItems = document.querySelectorAll('.carousel-eventos img');
   
-    nextBtn.addEventListener('click', () => {
-      const maxIndex = Math.ceil(totalItems / itemsPerView) - 1;
-      if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateCarousel();
+  let itemsPerView = 3; // Padrão para desktop
+  let currentIndexEventos = 0;
+  
+  function updateItemsPerView() {
+      if (window.innerWidth <= 768) {
+          itemsPerView = 2; // Tablet
+      } 
+      if (window.innerWidth <= 576) {
+          itemsPerView = 1; // Celular
       }
-    }); // <- Corrigido aqui!
+  }
   
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
+  function updateCarouselEventos() {
+      const shift = currentIndexEventos * (100 / itemsPerView);
+      carouselEventos.style.transform = `translateX(-${shift}%)`;
+  }
+  
+  if (nextBtnEventos) {
+      nextBtnEventos.addEventListener('click', () => {
+          updateItemsPerView();
+          const maxIndex = Math.ceil(eventosItems.length / itemsPerView) - 1;
+          if (currentIndexEventos < maxIndex) {
+              currentIndexEventos++;
+              updateCarouselEventos();
+          }
+      });
+  }
+  
+  if (prevBtnEventos) {
+      prevBtnEventos.addEventListener('click', () => {
+          if (currentIndexEventos > 0) {
+              currentIndexEventos--;
+              updateCarouselEventos();
+          }
+      });
+  }
+  
+  // Atualiza na mudança de tamanho da tela
+  window.addEventListener('resize', function() {
+      updateItemsPerView();
+      updateCarouselEventos();
+  });
+  
+  // Inicializa
+  updateItemsPerView();
+  updateCarouselEventos();
+  
     // =======================
     // Botão Ver Mais / Ver Menos
     // =======================
