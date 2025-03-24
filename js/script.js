@@ -41,46 +41,42 @@ document.addEventListener("DOMContentLoaded", function () {
       verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
     });
   });
-    // =======================
-    // Validação do Formulário
-    // =======================
-    const form = document.getElementById("formContato");
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const assunto = document.getElementById("assunto").value.trim();
-      const mensagem = document.getElementById("mensagem").value.trim();
-  
-      if (!validarFormulario(nome, email, assunto, mensagem)) {
-        return;
-      }
-  
-      alert("Mensagem enviada com sucesso!");
-      form.reset();
-    });
-  
-    function validarFormulario(nome, email, assunto, mensagem) {
-      if (nome === "" || email === "" || assunto === "" || mensagem === "") {
-        alert("Por favor, preencha todos os campos!");
-        return false;
-      }
-  
-      if (!validarEmail(email)) {
-        alert("Por favor, insira um e-mail válido!");
-        return false;
-      }
-  
-      return true;
-    }
-  
-    function validarEmail(email) {
-      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regexEmail.test(email);
-    }
-  
+
+  function mudarSlide(direction, carrousel) {
+    const slides = carrousel.querySelectorAll('.slide');
+    let currentIndex = -1;
     
-   
-  
+    // Encontra o slide ativo
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('ativo')) {
+            currentIndex = index;
+            slide.classList.remove('ativo');
+        }
+    });
+    
+    // Calcula o novo índice
+    let newIndex = currentIndex + direction;
+    
+    // Verifica os limites
+    if (newIndex >= slides.length) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = slides.length - 1;
+    }
+    
+    // Mostra o novo slide
+    slides[newIndex].classList.add('ativo');
+}
+
+// Configura os eventos de clique
+document.querySelectorAll('.carrossel .prev').forEach(btn => {
+    btn.addEventListener('click', function() {
+        mudarSlide(-1, this.closest('.carrossel'));
+    });
+});
+
+document.querySelectorAll('.carrossel .next').forEach(btn => {
+    btn.addEventListener('click', function() {
+        mudarSlide(1, this.closest('.carrossel'));
+    });
+});
