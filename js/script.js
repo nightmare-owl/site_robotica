@@ -28,7 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCarousel();
       }
     });
+    // =======================
+    // Botão Ver Mais / Ver Menos
+    // =======================
+    const verMaisBtn = document.getElementById('verMaisBtn');
+    const materiaisExtras = document.getElementById('materiaisExtras');
   
+    verMaisBtn.addEventListener('click', () => {
+      const estaVisivel = materiaisExtras.style.display === 'flex' || materiaisExtras.style.display === 'block';
+  
+      materiaisExtras.style.display = estaVisivel ? 'none' : 'flex';
+      verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
+    });
+  });
     // =======================
     // Validação do Formulário
     // =======================
@@ -69,17 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return regexEmail.test(email);
     }
   
-    // =======================
-    // Botão Ver Mais / Ver Menos
-    // =======================
-    const verMaisBtn = document.getElementById('verMaisBtn');
-    const materiaisExtras = document.getElementById('materiaisExtras');
-  
-    verMaisBtn.addEventListener('click', () => {
-      const estaVisivel = materiaisExtras.style.display === 'flex' || materiaisExtras.style.display === 'block';
-  
-      materiaisExtras.style.display = estaVisivel ? 'none' : 'flex';
-      verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
-    });
-  });
+    
+   
   

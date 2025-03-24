@@ -105,6 +105,7 @@ nav ul li a:hover {
 }
 
 /* EVENTOS */
+/* EVENTOS */
 .eventos {
     text-align: center;
     padding: 20px;
@@ -112,54 +113,11 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-.carousel-container {
-    position: relative;
-    width: 80%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    gap: 30px; /* Espaço entre as imagens */
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel img {
-    width: 100%;
-    height: 300px; /* Ajuste a altura conforme necessário */
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    flex: 0 0 auto; /* Evita que as imagens se estiquem ou encolham */
-}
-
-.carousel img:not(:nth-child(2)) {
-    filter: blur(3px);
-    transform: scale(0.9);
-}
-
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
-
 /* Contêiner para o carrossel */
 .carousel-eventos-container {
     position: relative;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px; /* reduzido para refletir melhor 3 imagens visíveis */
     margin: 30px auto;
     overflow: hidden;
 }
@@ -168,20 +126,20 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-/* A largura total do carrossel será proporcional ao número de imagens */
+/* Wrapper que contém todas as imagens do carrossel */
 .carousel-eventos {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(100% * 5 / 3); /* 5 imagens no total / 3 visíveis = proporção da largura */
 }
 
+/* Cada imagem ocupa 1/3 do carrossel */
 .carousel-eventos img {
-    flex: 0 0 calc(100% / 5); /* Cada imagem ocupará 1/3 da largura do carrossel */
-    object-fit: cover; /* Manter a proporção da imagem sem distorcer */
-    height: 200px; /* Ajuste a altura conforme necessário */
-    width:200px;
-    padding: 0 5px; /* Pequeno espaçamento entre as imagens */
-    box-sizing: border-box; /* Certifique-se de que o padding não afete o tamanho */
+    flex: 0 0 calc(100% / 3);
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    padding: 0 5px;
+    box-sizing: border-box;
     border-radius: 10px;
 }
 
@@ -374,24 +332,25 @@ button.next { right: 10px; }
 
 .materiais p {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .materiais-container,
 .materiais-extra {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px; /* espaçamento um pouco maior entre os cards */
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .material {
     background: white;
     color: #003366;
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    width: 250px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    width: 300px; /* aumentamos de 250px para 300px */
     text-align: center;
     transition: transform 0.3s ease;
 }
