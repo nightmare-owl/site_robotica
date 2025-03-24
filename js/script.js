@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // CARROSSEL PROJETOS
+
   function mudarSlide(direction, carrousel) {
     const slides = carrousel.querySelectorAll('.slide');
     let currentIndex = -1;
