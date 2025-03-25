@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentIndexEventos = 0;
   
   function updateItemsPerView() {
+      if (window.innerWidth > 768) {
+          itemsPerView = 3; // PC
+          currentIndexEventos = 0;
+      } 
       if (window.innerWidth <= 768) {
           itemsPerView = 2; // Tablet
       } 
