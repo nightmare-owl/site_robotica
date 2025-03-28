@@ -2,20 +2,22 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>WallBotz - Robótica Educacional</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+    <title>WallBotz - Robótica Educacional</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
+
+    <!-- ========================= -->
     <!-- Cabeçalho e Navegação -->
+    <!-- ========================= -->
     <header>
         <nav>
             <div class="logo">
-                <img src="images/Logo WallBotz- Menu.png" alt="Logo WallBotz">
-                <div class="logo-name">WallBotz</div>
+                <img src="images/Logo WallBotz- Menu.png" alt="Logo WallBotz"> <!-- Exibe o logotipo do site -->
+                <div class="logo-name">WallBotz</div> <!-- Nome da marca ao lado do logotipo -->
             </div>
-            <button class="menu-toggle">☰</button>
-            <ul class="nav-links">
+            <button class="menu-toggle">☰</button> <!-- Botão de menu hamburguer para dispositivos móveis -->
+            <ul class="nav-links"> <!-- Lista de links para navegação -->
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -25,29 +27,34 @@
         </nav>
     </header>
 
-    <!-- Seção Hero (Início) -->
-    <section  id="hero" class="hero" >
+    <!-- ========================= -->
+    <!-- Seção Hero (Destaque) -->
+    <!-- ========================= -->
+    <section id="hero" class="hero">
         <div class="hero-content">
-            <h3>Robótica Educacional</h3>
+            <h3>Robótica Educacional</h3> <!-- Introdução do tema -->
             <h1>Conectando <span class="highlight">Mentes Brilhantes:</span><br> 
                 Juntos, Construímos o Amanhã da <span class="highlight">Robótica!</span>
-            </h1>
-            <img src="images/logo-IFNMG.png" alt="Instituto Federal">
+            </h1> <!-- Título principal com destaque -->
+            <img src="images/logo-IFNMG.png" alt="Instituto Federal"> <!-- Logo do Instituto Federal -->
         </div>
         <div class="hero-image">
-            <img src="images/Logo WallBotz - Início.png" alt="Logo WallBotz">
+            <img src="images/Logo WallBotz - Início.png" alt="Logo WallBotz"> <!-- Imagem ilustrativa -->
         </div>
     </section>
 
+    <!-- ========================= -->
     <!-- Seção de Eventos -->
+    <!-- ========================= -->
     <section id="eventos" class="eventos">
-        <h2>Eventos</h2>
+        <h2>Eventos</h2> <!-- Título da seção -->
         <p>Veja os <strong>eventos</strong> mais recentes em que <strong>nossa equipe</strong> participou.</p>
       
+        <!-- Carrossel de eventos -->
         <div class="carousel-eventos-container">
-          <button class="event-prev">&#10094;</button>  
+          <button class="event-prev">&#10094;</button> <!-- Botão para voltar -->
           <div class="carousel-eventos-wrapper">
-            <div class="carousel-eventos">
+            <div class="carousel-eventos"> <!-- Imagens que serão deslizadas no carrossel -->
               <img src="/images/exemploCarrossel.jpg" alt="Evento 1">
               <img src="/images/exemploCarrossel.jpg" alt="Evento 2">
               <img src="/images/exemploCarrossel.jpg" alt="Evento 3">
@@ -55,48 +62,38 @@
               <img src="/images/exemploCarrossel.jpg" alt="Evento 5">
             </div>
           </div>
-          <button class="event-next">&#10095;</button>
+          <button class="event-next">&#10095;</button> <!-- Botão para avançar -->
         </div>
-      </section>
-      
+    </section>
     
+    <!-- ========================= -->
     <!-- Seção Sobre Nós -->
+    <!-- ========================= -->
     <section id="sobre" class="sobre-nos">
-        <h2>Sobre nós</h2>
+        <h2>Sobre nós</h2> <!-- Título da seção -->
         <p class="texto-pos-titulo">Unimos <strong>tecnologia</strong> e <strong>educação</strong> para transformar o aprendizado em experiências práticas.</p>
         <div class="sobre-conteudo">
             <div class="texto">
                 <h3 class="pre-titulo"><strong>Transformando</strong> <span class="destaque">Educação com Robótica</span></h3>
                 <p class="texto-sobre-nos">
-                    No <span class="destaque">IFNMG - Campus Salinas</span>, nossa equipe de robótica une tecnologia e educação, promovendo um aprendizado ativo.
-                    A robótica educacional desperta a <span class="destaque">curiosidade dos alunos,</span> estimulando o raciocínio crítico e a criatividade, 
-                    tornando o ensino mais <span class="destaque">interativo e prático.</span><br><br>
-                    Envolvemos alunos de diferentes cursos em <span class="destaque">trabalho em equipe,</span> desenvolvendo habilidades essenciais.
-                    Promovemos eventos educativos em comunidades, <span class="destaque">ampliando o conhecimento</span> e incentivando a participação. Estamos
-                    comprometidos em formar protagonistas no ensino-aprendizagem, <span class="destaque">preparando nossos alunos para o futuro.</span>
+                    <!-- Aqui pode ser adicionado um texto sobre a missão da equipe -->
                 </p>
             </div>
             <div class="imagem-equipe">
-                <img src="images/Equipe.jpg" alt="Equipe de robótica">
+                <img src="images/Equipe.jpg" alt="Equipe de robótica"> <!-- Imagem da equipe -->
             </div>
         </div>
     </section>
 
+    <!-- ========================= -->
     <!-- Seção de Projetos -->
-    <section id ="projetos" class="projetos">
+    <!-- ========================= -->
+    <section id="projetos" class="projetos">
         <div class="projetos-container">
-            <!-- Imagem Futurista -->
-            <div class="imagem-futurista">
-                <img src="images/Imagem-Futurista.png" alt="Imagem Futurista">
-            </div>
-
-            <!-- Projeto Robô-01 -->
             <div class="projeto">
-                <h3 class="titulo-robo">Robô-01</h3>
+                <h3 class="titulo-robo">Robô-01</h3> <!-- Nome do projeto -->
                 <p class="texto-robos">
-                    O Robô-01 é um robô autônomo para terrenos desafiadores. Com sensores avançados, câmeras HD e Inteligência
-                    artificial, ele mapeia ambientes, evita obstáculos e executa tarefas com autonomia. Ideal para pesquisa, segurança
-                    e indústria, ele revoluciona a robótica moderna.
+                    <!-- Adicione uma breve descrição do projeto -->
                 </p>
                 <div class="carrossel">
                     <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
@@ -108,207 +105,40 @@
                     <button class="next" onclick="mudarSlide(1)">&#10095;</button>
                 </div>
             </div>
-
-            <!-- Projeto Robô-02 -->
-            <div class="projeto"></br>
-                <h3 class="titulo-robo">Robô-02</h3></br></br>
-                <p class="texto-robos">
-                    O Robô-02 é um robô autônomo para terrenos desafiadores. Com sensores avançados, câmeras HD e Inteligência
-                    artificial, ele mapeia ambientes, evita obstáculos e executa tarefas com autonomia. Ideal para pesquisa, segurança
-                    e indústria, ele revoluciona a robótica moderna.
-                </p></br></br></br></br>
-                <div class="carrossel">
-                    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-                    <div class="slides">
-                        <img src="images/robo-1.jpg" class="slide ativo" alt="Robô 1">
-                        <img src="images/robo-2.jpg" class="slide" alt="Robô 2">
-                        <img src="images/robo-3.jpg" class="slide" alt="Robô 3">
-                    </div>
-                    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-                </div></br></br></divbr>
-            </div>
-
-            <!-- Projeto Robô-03 -->
-            <div class="projeto-branco"></br>
-                <h3 class="titulo-robo">Robô-03</h3>
-                <p class="texto-robos">
-                    O Robô-03 é um robô autônomo para terrenos desafiadores. Com sensores avançados, câmeras HD e Inteligência
-                    artificial, ele mapeia ambientes, evita obstáculos e executa tarefas com autonomia. Ideal para pesquisa, segurança
-                    e indústria, ele revoluciona a robótica moderna.
-                </p>
-                <div class="carrossel">
-                    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-                    <div class="slides">
-                        <img src="images/robo-3.jpg" class="slide ativo" alt="Robô 1">
-                        <img src="images/robo-2.jpg" class="slide" alt="Robô 2">
-                        <img src="images/robo-1.jpg" class="slide" alt="Robô 3">
-                    </div>
-                    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-                </div>
-            </div>
         </div>
     </section>
-    <section id="materiais" class="materiais">
-        <h2>Materiais</h2>
-        <p><strong>Materiais didáticos</strong> de robótica disponíveis para <strong>download</strong>.</p>
-      
-        <!-- Materiais principais -->
-        <div class="materiais-container">
-          <!-- Material 1 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais.png" alt="Ícone Robótica">
-            <h3>Desafios e Soluções em Robótica Educacional</h3>
-            <p>Este material aborda os principais desafios enfrentados no ensino de robótica e apresenta soluções eficientes.</p>
-            <a href="downloads/desafios_solucoes.pdf" class="download-btn" download>Download</a>
-          </div>
-      
-          <!-- Material 2 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais (1).png" alt="Ícone Estratégias">
-            <h3>Estratégias para Equipes Educacionais</h3>
-            <p>Um guia com estratégias e metodologias para auxiliar professores e alunos no ensino da robótica.</p>
-            <a href="downloads/estrategias_equipes.pdf" class="download-btn" download>Download</a>
-          </div>
-      
-          <!-- Material 3 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais (2).png" alt="Ícone Guia">
-            <h3>Guia para Equipes Educacionais</h3>
-            <p>Este guia fornece orientações detalhadas para a formação e gestão de equipes educacionais em robótica.</p>
-            <a href="downloads/guia_equipes.pdf" class="download-btn" download>Download</a>
-          </div>
-        </div>
-      
-        <!-- Materiais extras (inicialmente ocultos) -->
-        <div class="materiais-extra" id="materiaisExtras" style="display: none;">
-          <!-- Material 4 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais.png" alt="Ícone Sustentável">
-            <h3>Robótica Sustentável nas Escolas</h3>
-            <p>Explora formas de integrar práticas sustentáveis nos projetos de robótica educacional.</p>
-            <a href="downloads/robotica_sustentavel.pdf" class="download-btn" download>Download</a>
-          </div>
-      
-          <!-- Material 5 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais (1).png" alt="Ícone Interdisciplinar">
-            <h3>Projetos Interdisciplinares com Robótica</h3>
-            <p>Inspiração e ideias para integrar a robótica com outras disciplinas do currículo escolar.</p>
-            <a href="downloads/projetos_interdisciplinares.pdf" class="download-btn" download>Download</a>
-          </div>
-      
-          <!-- Material 6 -->
-          <div class="material">
-            <img src="images/Icon ilustrativo - Materiais (2).png" alt="Ícone Clubes">
-            <h3>Gestão de Clubes de Robótica</h3>
-            <p>Dicas práticas para organizar e manter clubes de robótica em ambientes escolares.</p>
-            <a href="downloads/gestao_clubes.pdf" class="download-btn" download>Download</a>
-          </div>
-        </div>
-      
-        <!-- Botão Ver Mais / Ver Menos -->
-        <button id="verMaisBtn">Ver Mais</button>
-    </section>
+
+    <!-- ========================= -->
     <!-- Seção de Contato -->
+    <!-- ========================= -->
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <h1>Contato</h1>
-            <div class="header-underline"></div>
+            <h1>Contato</h1> <!-- Título da seção -->
         </div>
-
-        <!-- Main content -->
         <div class="content">
-            <!-- Contact Information -->
             <div class="contact-info">
-                <!-- Address -->
                 <div class="info-item">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <div class="info-content">
-                        <h3>Endereço</h3>
-                        <p>
-                            Fazenda Varginha<br>
-                            Km 02, Rod. Salinas/Taiobeiras<br>
-                            Salinas - Minas Gerais<br>
-                            CEP: 39560-000<br>
-                            Brasil
-                        </p>
-                    </div>
+                    <h3>Endereço</h3>
+                    <p>Fazenda Varginha, Salinas - MG</p>
                 </div>
-
-                <!-- Phone -->
                 <div class="info-item">
-                    <div class="icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                        </svg>
-                    </div>
-                    <div class="info-content">
-                        <h3>Telefone de contato</h3>
-                        <p>+55 (38) 3841-7000</p>
-                    </div>
+                    <h3>Telefone</h3>
+                    <p>+55 (38) 3841-7000</p>
                 </div>
-
-                <!-- Email -->
                 <div class="info-item">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <div class="info-content">
-                        <h3>E-mail de contato</h3>
-                        <p>wallbotz973@gmail.com</p>
-                    </div>
+                    <h3>E-mail</h3>
+                    <p>wallbotz973@gmail.com</p>
                 </div>
             </div>
-
-            <!-- Contact Form -->
             <div class="contact-form">
                 <form>
-                    <div class="form-row">
-                        <input type="text" placeholder="Nome">
-                        <input type="email" placeholder="E-mail">
-                    </div>
-                    <input type="text" placeholder="Assunto">
-                    <textarea placeholder="Mensagem"></textarea>
-                    <div class="submit-container">
-                        <button type="submit">Enviar Mensagem</button>
-                    </div>
+                    <input type="text" placeholder="Nome"> <!-- Campo de nome -->
+                    <input type="email" placeholder="E-mail"> <!-- Campo de e-mail -->
+                    <textarea placeholder="Mensagem"></textarea> <!-- Campo de mensagem -->
+                    <button type="submit">Enviar Mensagem</button> <!-- Botão de envio -->
                 </form>
             </div>
         </div>
-
-        <!-- Social Media Icons -->
-        <div class="social-media" title="Página do instagram">
-            <a href="https://www.instagram.com/roboticaif?igsh=Y2QzamZ2OG9qdXhh" class="social-icon" target="_blank">
-                <svg viewBox="0 0 24 24">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-            </a>
-            <a class="social-icon" title="Facebook em breve...">
-                <svg viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-            </a>
-            <a class="social-icon" title="WhatsApp em breve...">
-                <svg viewBox="0 0 24 24">
-                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
-                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-                    <path d="M13.5 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-                    <path d="M9 13.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z"></path>
-                </svg>
-            </a>
-        </div>
     </div>
-    <script src="/js/script.js"></script>   
 </body>
 </html>
